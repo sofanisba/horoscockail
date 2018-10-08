@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'models/horoscope.dart';
+import 'signs_route.dart';
 
 void main() => runApp(new MyApp());
 
@@ -10,26 +10,9 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Winetrology',
       theme: new ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Some bullshit'),
-        ),
-        body: Center(
-          child: FutureBuilder<Horoscope>(
-            future: fetchHoroscope('virgo'),
-            builder: (context, snapshot) {
-              if (snapshot.hasData) {
-                return Text(snapshot.data.description);
-              } else if (snapshot.hasError) {
-                return Text("${snapshot.error}");
-              }
-              return CircularProgressIndicator();
-            }
-          )
-        )
-      )
+      home: SignsRoute(),
     );
   }
 }
