@@ -3,38 +3,52 @@ import 'package:meta/meta.dart';
 
 // We use an underscore to indicate that these variables are private.
 // See https://www.dartlang.org/guides/language/effective-dart/design#libraries
-final _rowHeight = 100.0;
+final _rowHeight = 80.0;
 final _borderRadius = BorderRadius.circular(_rowHeight / 2);
 
 class Sign extends StatelessWidget {
   final String name;
   final ColorSwatch color;
-  final IconData iconLocation;
+  final String icon;
 
   const Sign({
     Key key,
     @required this.name,
     @required this.color,
-    @required this.iconLocation,
+    @required this.icon,
   })  : assert(name != null),
         assert(color != null),
-        assert(iconLocation != null),
+        assert(icon != null),
         super(key: key);
+
+  void _navigateToHoroscope(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute<Null>(
+      builder: (BuildContext context) {
+        return Scaffold(
+          appBar: AppBar(
+            elevation: 1.0,
+            title: Text(
+              name,
+              style: Theme.of(context).textTheme.display1,
+            ),
+            centerTitle: true,
+            backgroundColor: color,
+          )
+        );
+      }
+    ));
+  }
 
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.transparent,
+      color: Colors.white30,
       child: Container(
         height: _rowHeight,
-        color: color[200],
         child: InkWell(
           borderRadius: _borderRadius,
-          highlightColor: color,
           splashColor: color,
-          onTap: () {
-            print(color);
-          },
+          onTap: () => _navigateToHoroscope(context),
           child: Padding(
             padding: EdgeInsets.all(8.0),
             child: Row(
@@ -42,10 +56,7 @@ class Sign extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsets.all(16.0),
-                  child: Icon(
-                    iconLocation,
-                    size: 60.0,
-                  ),
+                  child: Image.asset(icon)
                 ),
                 Center(
                   child: Text(

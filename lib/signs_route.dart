@@ -33,6 +33,21 @@ class SignsRoute extends StatelessWidget {
     Colors.yellow,
   ];
 
+  static const _icons = <String>[
+    'assets/aries.png',
+    'assets/taurus.png',
+    'assets/gemini.png',
+    'assets/cancer.png',
+    'assets/leo.png',
+    'assets/virgo.png',
+    'assets/libra.png',
+    'assets/scorpio.png',
+    'assets/sagittarius.png',
+    'assets/capricorn.png',
+    'assets/aquarius.png',
+    'assets/pisces.png',
+  ];
+
   Widget _buildCategoryWidgets(List<Widget> signs) {
     return ListView.builder(
       itemBuilder: (BuildContext context, int index) => signs[index],
@@ -48,7 +63,7 @@ class SignsRoute extends StatelessWidget {
       signs.add(Sign(
         name: _signNames[i],
         color: _colors[i],
-        iconLocation: Icons.account_balance
+        icon: _icons[i]
       ));
     }
 
@@ -61,14 +76,14 @@ class SignsRoute extends StatelessWidget {
     final appBar = AppBar(
       elevation: 0.5,
       title: Text(
-        'Horowineoscopes',
+        'Wineohoroscopes',
         style: TextStyle(
-          color: Colors.black,
+          color: Colors.white,
           fontSize: 30.0
         ),
       ),
       centerTitle: true,
-      backgroundColor: Colors.white30
+      backgroundColor: Colors.red[900]
     );
 
     return Scaffold(
