@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
+import 'horoscope_route.dart';
 
 // We use an underscore to indicate that these variables are private.
 // See https://www.dartlang.org/guides/language/effective-dart/design#libraries
@@ -33,6 +34,11 @@ class Sign extends StatelessWidget {
             ),
             centerTitle: true,
             backgroundColor: color,
+          ),
+          body: HoroscopeRoute(
+            name: name,
+            color: color,
+            icon: icon
           )
         );
       }
