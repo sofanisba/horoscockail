@@ -10,7 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c70dee09-300c-4207-9e36-146b0a7c725a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/sign.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/sign.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/horoscope_route.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/horoscope_route.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -37,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="horoscope_route.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="horoscope_route.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/horoscope_route.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="600">
+              <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -61,10 +62,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sign.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sign.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/sign.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="570">
               <caret line="38" column="23" lean-forward="true" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -96,8 +97,8 @@
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/signs_route.dart" />
         <option value="$PROJECT_DIR$/lib/horoscopeDetail.dart" />
-        <option value="$PROJECT_DIR$/lib/horoscope_route.dart" />
         <option value="$PROJECT_DIR$/lib/sign.dart" />
+        <option value="$PROJECT_DIR$/lib/horoscope_route.dart" />
       </list>
     </option>
   </component>
@@ -251,16 +252,16 @@
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5011062" side_tool="true" weight="0.40216216" />
-      <window_info anchor="bottom" id="Dart Analysis" order="7" sideWeight="0.4988938" visible="true" weight="0.3264865" />
+      <window_info anchor="bottom" id="Dart Analysis" order="7" sideWeight="0.4988938" weight="0.3264865" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.84181416" weight="0.3318919" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32972974" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4988938" weight="0.22486487" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4988938" visible="true" weight="0.22486487" />
       <window_info anchor="right" id="Flutter Outline" order="6" />
       <window_info anchor="bottom" id="Logcat" order="10" weight="0.32864866" />
       <window_info id="Captures" order="4" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19469027" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19469027" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" />
@@ -566,10 +567,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/horoscope_route.dart">
+    <entry file="file://$PROJECT_DIR$/lib/sign.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="570">
+          <caret line="38" column="23" lean-forward="true" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -586,10 +587,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/sign.dart">
+    <entry file="file://$PROJECT_DIR$/lib/horoscope_route.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="38" column="23" lean-forward="true" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+        <state relative-caret-position="600">
+          <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
