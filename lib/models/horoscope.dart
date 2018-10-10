@@ -7,6 +7,7 @@ Future<Horoscope> fetchHoroscope(String sign) async {
  final response =
     await http.post('https://aztro.sameerkumar.website/?sign=$sign&date=today');
  if (response.statusCode == 200) {
+      print(response.body);
      return Horoscope.fromJson(json.decode(response.body));
  } else {
    throw Exception('fail');
@@ -26,7 +27,7 @@ class Horoscope {
       description: json['description'],
       color: json['color'],
       mood: json['mood'],
-      compatibility: json['compatiblity']
+      compatibility: json['compatibility']
     );
   }
 }

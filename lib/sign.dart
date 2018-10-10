@@ -26,8 +26,9 @@ class Sign extends StatelessWidget {
     Navigator.of(context).push(MaterialPageRoute<Null>(
       builder: (BuildContext context) {
         return Scaffold(
+          backgroundColor: color[100],
           appBar: AppBar(
-            elevation: 1.0,
+            elevation: 1.5,
             title: Text(
               name,
               style: Theme.of(context).textTheme.display1,

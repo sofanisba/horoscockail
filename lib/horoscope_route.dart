@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
-import 'models/horoscope.dart';
+import 'horoscope_card.dart';
 
 class HoroscopeRoute extends StatelessWidget {
   final String name;
@@ -25,23 +25,18 @@ class HoroscopeRoute extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          new Text(
-            'Today\s Horoscope',
-            style: Theme.of(context).textTheme.display1,
-          ),
-          Center(
-            child: FutureBuilder<Horoscope>(
-              future: fetchHoroscope(name),
-              builder: (context, snapshot) {
-                if (snapshot.hasData) {
-                  return Text(snapshot.data.description);
-                } else if (snapshot.hasError) {
-                  return Text("${snapshot.error}");
-                }
-                return CircularProgressIndicator();
-              }
+          Card(
+            elevation: 1.0,
+            child: Container(
+              padding: new EdgeInsets.all(8.0),
+              margin: new EdgeInsets.all(8.0),
+              child: HoroscopeCard(
+                sign: name,
+                color: color,
+                icon: icon
+              ),
             ),
-          )
+          ),
         ],
       )
     );
