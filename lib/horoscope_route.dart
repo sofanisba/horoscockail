@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 import 'horoscope_card.dart';
+import 'booze_card.dart';
 
 class HoroscopeRoute extends StatelessWidget {
   final String name;
@@ -21,9 +22,7 @@ class HoroscopeRoute extends StatelessWidget {
       color: Colors.transparent,
       margin: EdgeInsets.all(8.0),
       padding: EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
+      child: ListView(
         children: <Widget>[
           Card(
             elevation: 1.0,
@@ -36,6 +35,14 @@ class HoroscopeRoute extends StatelessWidget {
                 icon: icon
               ),
             ),
+          ),
+          Card(
+            elevation: 1.0,
+            child: Container(
+              padding: new EdgeInsets.all(8.0),
+              margin: new EdgeInsets.all(8.0),
+              child: BoozeCard(color: color)
+            )
           ),
         ],
       )

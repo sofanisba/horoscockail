@@ -27,10 +27,10 @@ class SignsRoute extends StatelessWidget {
     Colors.teal,
     Colors.lightBlue,
     Colors.brown,
-    Colors.amber,
+    Colors.amberAccent,
     Colors.purple,
     Colors.blue,
-    Colors.yellow,
+    Colors.teal,
   ];
 
   static const _icons = <String>[

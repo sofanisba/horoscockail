@@ -19,21 +19,26 @@ class HoroscopeCardText extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 4.0),
       child: Row (
         children: <Widget>[
-          Text(
-            "$name ",
-            style: new TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20.0,
-                height: 2.0
-            ),
+          Expanded(
+            child: Text(
+              "$name ",
+              textAlign: TextAlign.left,
+              style: new TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0,
+                  height: 2.0
+              ),
+            )
           ),
-          Text(
+          Expanded(
+            child: Text(
               value,
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
               style: new TextStyle(
                   fontSize: 20.0,
                   height: 2.0
               )
+            )
           )
         ]
       )
@@ -94,7 +99,12 @@ class HoroscopeCard extends StatelessWidget {
         } else if (snapshot.hasError) {
           return new Text(snapshot.error);
         }
-        return CircularProgressIndicator(backgroundColor: color);
+        return Container(
+          width: 20.0,
+          height: 40.0,
+          alignment: Alignment.center,
+          child: CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(color))
+        );
       }
     );
   }
