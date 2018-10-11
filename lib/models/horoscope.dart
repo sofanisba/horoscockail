@@ -2,16 +2,14 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-
 Future<Horoscope> fetchHoroscope(String sign) async {
- final response =
-    await http.post('https://aztro.sameerkumar.website/?sign=$sign&date=today');
- if (response.statusCode == 200) {
-      print(response.body);
-     return Horoscope.fromJson(json.decode(response.body));
- } else {
-   throw Exception('fail');
- }
+  final response = await http
+      .post('https://aztro.sameerkumar.website/?sign=$sign&date=today');
+  if (response.statusCode == 200) {
+    return Horoscope.fromJson(json.decode(response.body));
+  } else {
+    throw Exception('fail');
+  }
 }
 
 class Horoscope {
@@ -24,10 +22,9 @@ class Horoscope {
 
   factory Horoscope.fromJson(Map<String, dynamic> json) {
     return Horoscope(
-      description: json['description'],
-      color: json['color'],
-      mood: json['mood'],
-      compatibility: json['compatibility']
-    );
+        description: json['description'],
+        color: json['color'],
+        mood: json['mood'],
+        compatibility: json['compatibility']);
   }
 }

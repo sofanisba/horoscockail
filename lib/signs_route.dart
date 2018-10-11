@@ -21,7 +21,7 @@ class SignsRoute extends StatelessWidget {
   static const _colors = <Color>[
     Colors.red,
     Colors.green,
-    Colors.lightGreenAccent,
+    Colors.lightGreen,
     Colors.grey,
     Colors.amber,
     Colors.teal,
@@ -50,45 +50,32 @@ class SignsRoute extends StatelessWidget {
 
   Widget _buildCategoryWidgets(List<Widget> signs) {
     return ListView.builder(
-      itemBuilder: (BuildContext context, int index) => signs[index],
-      itemCount: signs.length
-    );
+        itemBuilder: (BuildContext context, int index) => signs[index],
+        itemCount: signs.length);
   }
 
   @override
   Widget build(BuildContext context) {
     final signs = <Sign>[];
 
-    for (var i = 0; i < _signNames.length; i ++) {
-      signs.add(Sign(
-        name: _signNames[i],
-        color: _colors[i],
-        icon: _icons[i]
-      ));
+    for (var i = 0; i < _signNames.length; i++) {
+      signs.add(Sign(name: _signNames[i], color: _colors[i], icon: _icons[i]));
     }
 
     final listView = Container(
-      color: Colors.white30,
-      padding: EdgeInsets.symmetric(horizontal: 8.0),
-      child: _buildCategoryWidgets(signs)
-    );
+        color: Colors.white30,
+        padding: EdgeInsets.symmetric(horizontal: 8.0),
+        child: _buildCategoryWidgets(signs));
 
     final appBar = AppBar(
-      elevation: 1.5,
-      title: Text(
-        'Wineohoroscopes',
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 30.0
+        elevation: 1.5,
+        title: Text(
+          'Wineohoroscopes',
+          style: TextStyle(color: Colors.white, fontSize: 30.0),
         ),
-      ),
-      centerTitle: true,
-      backgroundColor: Colors.red[900]
-    );
+        centerTitle: true,
+        backgroundColor: Colors.red[900]);
 
-    return Scaffold(
-      appBar: appBar,
-      body: listView
-    );
+    return Scaffold(appBar: appBar, body: listView);
   }
 }
