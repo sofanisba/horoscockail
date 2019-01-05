@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
-import 'models/wine.dart';
+import 'models/cocktail.dart';
 
 class BoozeCard extends StatelessWidget {
   final Color color;
@@ -13,22 +13,17 @@ class BoozeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<Wine>(
-        future: fetchWine(),
+    return FutureBuilder<Cocktail>(
+        future: fetchCocktail(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return Column(children: <Widget>[
               Padding(
                 padding: EdgeInsets.all(8.0),
-                child: Image.asset(
-                  'assets/wine.png',
-                  height: 70.0,
-                  color: color,
-                ),
               ),
               Text(snapshot.data.name),
-              Text(snapshot.data.tastingNote),
-              Text(snapshot.data.varietal)
+              Text(snapshot.data.glass),
+              Text(snapshot.data.instructions)
             ]);
           } else if (snapshot.hasError) {
             return Text(snapshot.error);

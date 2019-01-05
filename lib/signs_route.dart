@@ -70,7 +70,7 @@ class SignsRoute extends StatelessWidget {
     final appBar = AppBar(
         elevation: 1.5,
         title: Text(
-          'Wineohoroscopes',
+          'Drinks n Horoscopes',
           style: TextStyle(color: Colors.white, fontSize: 30.0),
         ),
         centerTitle: true,
