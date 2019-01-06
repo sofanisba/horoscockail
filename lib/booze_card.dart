@@ -18,11 +18,21 @@ class BoozeCard extends StatelessWidget {
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return Column(children: <Widget>[
+              Text('Looks like you need a drink',
+                  style: Theme.of(context).textTheme.subtitle),
               Padding(
                 padding: EdgeInsets.all(8.0),
+                child: ClipRRect(
+                  borderRadius: new BorderRadius.circular(3.0),
+                  child: Image.network(
+                    snapshot.data.thumbnail,
+                    height: 150.0,
+                  ),
+                ),
               ),
-              Text(snapshot.data.name),
-              Text(snapshot.data.glass),
+              Text(snapshot.data.name,
+                  style: Theme.of(context).textTheme.display1),
+              Align(alignment: Alignment.centerLeft, child: Text('Glass')),
               Text(snapshot.data.instructions)
             ]);
           } else if (snapshot.hasError) {
