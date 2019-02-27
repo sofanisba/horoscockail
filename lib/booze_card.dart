@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 import 'models/cocktail.dart';
+import './tabled_list_item.dart';
 
 class BoozeCard extends StatelessWidget {
   final Color color;
@@ -18,7 +19,7 @@ class BoozeCard extends StatelessWidget {
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return Column(children: <Widget>[
-              Text('Looks like you need a drink',
+              Text('After that, looks like you need a drink',
                   style: Theme.of(context).textTheme.subtitle),
               Padding(
                 padding: EdgeInsets.all(8.0),
@@ -32,7 +33,10 @@ class BoozeCard extends StatelessWidget {
               ),
               Text(snapshot.data.name,
                   style: Theme.of(context).textTheme.display1),
-              Align(alignment: Alignment.centerLeft, child: Text('Glass')),
+              TabledListItem(
+                name: 'Glass',
+                value: snapshot.data.glass
+              ),
               Text(snapshot.data.instructions)
             ]);
           } else if (snapshot.hasError) {
@@ -45,11 +49,5 @@ class BoozeCard extends StatelessWidget {
               child: CircularProgressIndicator(
                   valueColor: new AlwaysStoppedAnimation<Color>(color)));
         });
-
-//    return Image.asset(
-//      'assets/wine2.png',
-//      height: 70.0,
-//      color: color,
-//    );
   }
 }

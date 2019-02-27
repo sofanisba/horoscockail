@@ -1,50 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 import 'models/horoscope.dart';
-
-class HoroscopeCardText extends StatelessWidget {
-  final String name;
-  final String value;
-
-  const HoroscopeCardText({
-    Key key,
-    @required this.name,
-    @required this.value
-  })  : assert(name != null),
-        assert(value != null),
-        super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 4.0),
-      child: Row (
-        children: <Widget>[
-          Expanded(
-            child: Text(
-              "$name ",
-              textAlign: TextAlign.left,
-              style: new TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20.0,
-                  height: 2.0
-              ),
-            )
-          ),
-          Expanded(
-            child: Text(
-              value,
-              textAlign: TextAlign.left,
-              style: new TextStyle(
-                  fontSize: 20.0,
-                  height: 2.0
-              )
-            )
-          )
-        ]
-      )
-    );
-  }
-}
+import './tabled_list_item.dart';
 
 class HoroscopeCard extends StatelessWidget {
   final String sign;
@@ -81,15 +38,15 @@ class HoroscopeCard extends StatelessWidget {
                 snapshot.data.description,
                 style: Theme.of(context).textTheme.headline
               ),
-              HoroscopeCardText(
+              TabledListItem(
                 name: 'Color',
                 value: snapshot.data.color
               ),
-              HoroscopeCardText(
+              TabledListItem(
                 name: 'Mood',
                 value: snapshot.data.mood
               ),
-              HoroscopeCardText(
+              TabledListItem(
                 name: 'Compatibility',
                 value: snapshot.data.compatibility
               ),

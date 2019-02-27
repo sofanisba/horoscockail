@@ -9,7 +9,6 @@ Future<Cocktail> fetchCocktail() async {
   const url = 'https://www.thecocktaildb.com/api/json/v1/$accessKey/random.php';
   final response = await http.get(url);
   if (response.statusCode == 200) {
-    print(response.body);
     return Cocktail.fromJson(json.decode(response.body));
   } else {
     throw Exception('fail');
