@@ -3,15 +3,26 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import './shared_prefs.dart';
 
-Future<Cocktail> fetchCocktail() async {
-  const accessKey = '1';
-  const url = 'https://www.thecocktaildb.com/api/json/v1/$accessKey/random.php';
-  final response = await http.get(url);
-  if (response.statusCode == 200) {
-    return Cocktail.fromJson(json.decode(response.body));
+Future<Cocktail> fetchCocktail(String sign) async {
+  final cocktailKey = Prefs.getCocktailKey(sign);
+  final shouldFetch = await Prefs.isDataStale(cocktailKey);
+  if (shouldFetch) {
+    const accessKey = '1';
+    const url =
+        'https://www.thecocktaildb.com/api/json/v1/$accessKey/random.php';
+    final response = await http.get(url);
+    if (response.statusCode == 200) {
+      await Prefs.setCocktail(sign, response.body);
+      await Prefs.setLastFetched(cocktailKey);
+      return Cocktail.fromJson(json.decode(response.body));
+    } else {
+      throw Exception('fail');
+    }
   } else {
-    throw Exception('fail');
+    final cocktail = await Prefs.getCocktail(sign);
+    return Cocktail.fromJson(json.decode(cocktail));
   }
 }
 

@@ -22,13 +22,12 @@ class Prefs {
 
   static Future<String> getHoroscope(sign) async {
     final p = await prefs;
-    final horoscope = jsonDecode(p.getString(sign)) ?? '';
-    return horoscope;
+    return jsonDecode(p.getString(sign)) ?? '';
   }
 
   static Future<String> getCocktail(sign) async {
     final p = await prefs;
-    return p.getString('${sign}_cocktail') ?? '';
+    return jsonDecode(p.getString('${sign}_cocktail')) ?? '';
   }
 
   static Future setLastFetched(String key) async {

@@ -16,17 +16,19 @@ getGreeting() {
 
 class BoozeCard extends StatelessWidget {
   final Color color;
+  final String sign;
 
   const BoozeCard({
     Key key,
     @required this.color,
-  })  : assert(color != null),
+    @required this.sign,
+  })  : assert(color != null, sign != null),
         super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<Cocktail>(
-        future: fetchCocktail(),
+        future: fetchCocktail(sign),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return Column(children: <Widget>[

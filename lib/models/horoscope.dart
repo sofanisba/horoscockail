@@ -4,14 +4,13 @@ import 'package:http/http.dart' as http;
 import './shared_prefs.dart';
 
 Future<Horoscope> fetchHoroscope(String sign) async {
-  var shouldFetch = await Prefs.isDataStale(sign);
+  final shouldFetch = await Prefs.isDataStale(sign);
 
   if (shouldFetch) {
-    await Prefs.clear();
     final response = await http
         .post('https://aztro.sameerkumar.website/?sign=$sign&date=today');
     if (response.statusCode == 200) {
-      var horoscope = Horoscope.fromJson(json.decode(response.body));
+      final horoscope = Horoscope.fromJson(json.decode(response.body));
       await Prefs.setHoroscope(sign, response.body);
       await Prefs.setLastFetched(sign);
       return horoscope;

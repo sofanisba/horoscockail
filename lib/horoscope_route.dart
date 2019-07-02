@@ -12,40 +12,33 @@ class HoroscopeRoute extends StatelessWidget {
     @required this.name,
     @required this.color,
     @required this.icon,
-  }) : assert(name != null),
-       assert(color != null),
-       assert(icon != null);
+  })  : assert(name != null),
+        assert(color != null),
+        assert(icon != null);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.transparent,
-      margin: EdgeInsets.all(8.0),
-      padding: EdgeInsets.all(16.0),
-      child: ListView(
-        children: <Widget>[
-          Card(
-            elevation: 1.0,
-            child: Container(
-              padding: new EdgeInsets.all(8.0),
-              margin: new EdgeInsets.all(8.0),
-              child: HoroscopeCard(
-                sign: name,
-                color: color,
-                icon: icon
+        color: Colors.transparent,
+        margin: EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(16.0),
+        child: ListView(
+          children: <Widget>[
+            Card(
+              elevation: 1.0,
+              child: Container(
+                padding: new EdgeInsets.all(8.0),
+                margin: new EdgeInsets.all(8.0),
+                child: HoroscopeCard(sign: name, color: color, icon: icon),
               ),
             ),
-          ),
-          Card(
-            elevation: 1.0,
-            child: Container(
-              padding: new EdgeInsets.all(8.0),
-              margin: new EdgeInsets.all(8.0),
-              child: BoozeCard(color: color)
-            )
-          ),
-        ],
-      )
-    );
+            Card(
+                elevation: 1.0,
+                child: Container(
+                    padding: new EdgeInsets.all(8.0),
+                    margin: new EdgeInsets.all(8.0),
+                    child: BoozeCard(color: color, sign: name))),
+          ],
+        ));
   }
 }
