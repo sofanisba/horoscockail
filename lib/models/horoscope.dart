@@ -1,14 +1,26 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import './shared_prefs.dart';
 
 Future<Horoscope> fetchHoroscope(String sign) async {
-  final response = await http
-      .post('https://aztro.sameerkumar.website/?sign=$sign&date=today');
-  if (response.statusCode == 200) {
-    return Horoscope.fromJson(json.decode(response.body));
+  var shouldFetch = await Prefs.isDataStale(sign);
+
+  if (shouldFetch) {
+    await Prefs.clear();
+    final response = await http
+        .post('https://aztro.sameerkumar.website/?sign=$sign&date=today');
+    if (response.statusCode == 200) {
+      var horoscope = Horoscope.fromJson(json.decode(response.body));
+      await Prefs.setHoroscope(sign, response.body);
+      await Prefs.setLastFetched(sign);
+      return horoscope;
+    } else {
+      throw Exception('fail');
+    }
   } else {
-    throw Exception('fail');
+    var h = await Prefs.getHoroscope(sign);
+    return Horoscope.fromJson(json.decode(h));
   }
 }
 
