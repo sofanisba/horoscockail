@@ -32,7 +32,9 @@ class BoozeCard extends StatelessWidget {
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return Column(children: <Widget>[
-              Text(getGreeting(), style: Theme.of(context).textTheme.subtitle),
+              Text(getGreeting(),
+                  style:
+                      TextStyle(fontSize: 20.0, fontStyle: FontStyle.italic)),
               Padding(
                 padding: EdgeInsets.all(8.0),
                 child: ClipRRect(
@@ -49,11 +51,10 @@ class BoozeCard extends StatelessWidget {
               Column(
                 children: <Widget>[
                   for (var item in snapshot.data.ingredients)
-                    if (
-                      item['ingredient'] != null &&
-                      item['measure'] != null &&
-                      item['ingredient'].length != 0 && 
-                      item['measure'].length != 0)
+                    if (item['ingredient'] != null &&
+                        item['measure'] != null &&
+                        item['ingredient'].length != 0 &&
+                        item['measure'].length != 0)
                       TabledListItem(
                           name: item['ingredient'], value: item['measure']),
                   Padding(padding: EdgeInsets.all(0.0)),
