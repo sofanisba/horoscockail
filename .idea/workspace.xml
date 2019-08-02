@@ -187,17 +187,17 @@
         <subPane>
           <expand>
             <path>
-              <item name="winetrology" type="1abcf292:AndroidViewProjectNode" />
-              <item name="winetrology" type="e9137016:NonAndroidModuleNode" />
+              <item name="horoscocktail" type="1abcf292:AndroidViewProjectNode" />
+              <item name="horoscocktail" type="e9137016:NonAndroidModuleNode" />
             </path>
             <path>
-              <item name="winetrology" type="1abcf292:AndroidViewProjectNode" />
-              <item name="winetrology" type="e9137016:NonAndroidModuleNode" />
+              <item name="horoscocktail" type="1abcf292:AndroidViewProjectNode" />
+              <item name="horoscocktail" type="e9137016:NonAndroidModuleNode" />
               <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
             </path>
             <path>
-              <item name="winetrology" type="1abcf292:AndroidViewProjectNode" />
-              <item name="winetrology" type="e9137016:NonAndroidModuleNode" />
+              <item name="horoscocktail" type="1abcf292:AndroidViewProjectNode" />
+              <item name="horoscocktail" type="e9137016:NonAndroidModuleNode" />
               <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -210,23 +210,23 @@
           <expand>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="winetrology" type="cbb8eebc:String" user="winetrology" />
+              <item name="horoscocktail" type="cbb8eebc:String" user="horoscocktail" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="winetrology" type="cbb8eebc:String" user="winetrology" />
-              <item name="winetrology" type="cbb8eebc:String" user="winetrology" />
+              <item name="horoscocktail" type="cbb8eebc:String" user="horoscocktail" />
+              <item name="horoscocktail" type="cbb8eebc:String" user="horoscocktail" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="winetrology" type="cbb8eebc:String" user="winetrology" />
-              <item name="winetrology" type="cbb8eebc:String" user="winetrology" />
+              <item name="horoscocktail" type="cbb8eebc:String" user="horoscocktail" />
+              <item name="horoscocktail" type="cbb8eebc:String" user="horoscocktail" />
               <item name="lib" type="cbb8eebc:String" user="lib" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="winetrology" type="cbb8eebc:String" user="winetrology" />
-              <item name="winetrology" type="cbb8eebc:String" user="winetrology" />
+              <item name="horoscocktail" type="cbb8eebc:String" user="horoscocktail" />
+              <item name="horoscocktail" type="cbb8eebc:String" user="horoscocktail" />
               <item name="lib" type="cbb8eebc:String" user="lib" />
               <item name="models" type="cbb8eebc:String" user="models" />
             </path>
@@ -238,17 +238,17 @@
         <subPane>
           <expand>
             <path>
-              <item name="winetrology" type="b2602c69:ProjectViewProjectNode" />
-              <item name="winetrology" type="462c0819:PsiDirectoryNode" />
+              <item name="horoscocktail" type="b2602c69:ProjectViewProjectNode" />
+              <item name="horoscocktail" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="winetrology" type="b2602c69:ProjectViewProjectNode" />
-              <item name="winetrology" type="462c0819:PsiDirectoryNode" />
+              <item name="horoscocktail" type="b2602c69:ProjectViewProjectNode" />
+              <item name="horoscocktail" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="winetrology" type="b2602c69:ProjectViewProjectNode" />
-              <item name="winetrology" type="462c0819:PsiDirectoryNode" />
+              <item name="horoscocktail" type="b2602c69:ProjectViewProjectNode" />
+              <item name="horoscocktail" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -259,7 +259,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="pubspec.yam&#9;FILE&#9;file:///home/tamara/AndroidStudioProjects/winetrology/pubspec.yaml&#10;signroute&#9;FILE&#9;file:///home/tamara/AndroidStudioProjects/winetrology/lib/signs_route.dart&#10;sign&#9;FILE&#9;file:///home/tamara/AndroidStudioProjects/winetrology/lib/sign.dart&#10;sign.dar&#9;FILE&#9;file:///home/tamara/AndroidStudioProjects/winetrology/lib/signs_route.dart&#10;pubspec.y&#9;FILE&#9;file:///home/tamara/AndroidStudioProjects/winetrology/pubspec.yaml&#10;ho&#9;FILE&#9;file:///home/tamara/AndroidStudioProjects/winetrology/lib/horoscope_card.dart&#10;split&#9;ACTION&#9;SplitVertically&#10;wine.dart&#9;FILE&#9;file:///home/tamara/AndroidStudioProjects/winetrology/lib/models/wine.dart&#10;horoscopec&#9;null&#9;null&#10;update&#9;ACTION&#9;UpdateFiles&#10;configuration&#9;ACTION&#9;editRunConfigurations&#10;plugins&#9;ACTION&#9;WelcomeScreen.Plugins&#10;avd&#9;ACTION&#9;Android.RunAndroidAvdManager" />
+    <property name="SearchEverywhereHistoryKey" value="pubspec.yam&#9;FILE&#9;file:///home/tamara/AndroidStudioProjects/horoscocktail/pubspec.yaml&#10;signroute&#9;FILE&#9;file:///home/tamara/AndroidStudioProjects/horoscocktail/lib/signs_route.dart&#10;sign&#9;FILE&#9;file:///home/tamara/AndroidStudioProjects/horoscocktail/lib/sign.dart&#10;sign.dar&#9;FILE&#9;file:///home/tamara/AndroidStudioProjects/horoscocktail/lib/signs_route.dart&#10;pubspec.y&#9;FILE&#9;file:///home/tamara/AndroidStudioProjects/horoscocktail/pubspec.yaml&#10;ho&#9;FILE&#9;file:///home/tamara/AndroidStudioProjects/horoscocktail/lib/horoscope_card.dart&#10;split&#9;ACTION&#9;SplitVertically&#10;wine.dart&#9;FILE&#9;file:///home/tamara/AndroidStudioProjects/horoscocktail/lib/models/wine.dart&#10;horoscopec&#9;null&#9;null&#10;update&#9;ACTION&#9;UpdateFiles&#10;configuration&#9;ACTION&#9;editRunConfigurations&#10;plugins&#9;ACTION&#9;WelcomeScreen.Plugins&#10;avd&#9;ACTION&#9;Android.RunAndroidAvdManager" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />

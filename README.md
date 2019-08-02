@@ -1,4 +1,4 @@
-# winetrology
+# horoscocktail
 
 A new Flutter application.
 

@@ -1,4 +1,4 @@
-name: winetrology
+name: horoscocktail
 description: A new Flutter application.
 
 # The following defines the version and build number for your application.
@@ -23,8 +23,14 @@ dependencies:
   cupertino_icons: ^0.1.2
 
 dev_dependencies:
+  flutter_launcher_icons: "^0.7.2"
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  android: true 
+  ios: true
+  image_path: "assets/horoscocktail-logo.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
