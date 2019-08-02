@@ -20,23 +20,24 @@ class HoroscopeRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         color: Colors.transparent,
-        margin: EdgeInsets.all(8.0),
-        padding: EdgeInsets.all(16.0),
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
         child: ListView(
           children: <Widget>[
             Card(
               elevation: 1.0,
+              margin: EdgeInsets.symmetric(vertical: 16.0),
               child: Container(
                 padding: new EdgeInsets.all(8.0),
-                margin: new EdgeInsets.all(8.0),
+                margin: new EdgeInsets.all(16.0),
                 child: HoroscopeCard(sign: name, color: color, icon: icon),
               ),
             ),
             Card(
                 elevation: 1.0,
+                margin: EdgeInsets.symmetric(vertical: 16.0),
                 child: Container(
                     padding: new EdgeInsets.all(8.0),
-                    margin: new EdgeInsets.all(8.0),
+                    margin: new EdgeInsets.all(16.0),
                     child: BoozeCard(color: color, sign: name))),
           ],
         ));
