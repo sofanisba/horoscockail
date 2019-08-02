@@ -1,8 +1,2 @@
-# horoscocktail
-
-A new Flutter application.
-
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+# Horoscocktail
+What happens when you decide you want to build a flutter app and spend 30 mins googling open apis
