@@ -63,18 +63,16 @@ class SignsRoute extends StatelessWidget {
     }
 
     final listView = Container(
-        color: Colors.white30,
         padding: EdgeInsets.symmetric(horizontal: 8.0),
         child: _buildCategoryWidgets(signs));
 
     final appBar = AppBar(
         elevation: 1.5,
         title: Text(
-          'Drinks n Horoscopes',
+          'Horoscocktail',
           style: TextStyle(color: Colors.white, fontSize: 30.0),
         ),
-        centerTitle: true,
-        backgroundColor: Colors.red[900]);
+        centerTitle: true);
 
     return Scaffold(appBar: appBar, body: listView);
   }

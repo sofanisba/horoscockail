@@ -8,10 +8,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Drinks n Horoscopes',
-      theme: new ThemeData(
-        primarySwatch: Colors.purple,
+      title: 'Horoscocktail',
+      theme: ThemeData(
+        brightness: Brightness.light,
+        primaryColor: Colors.purple,
       ),
+      darkTheme:
+          ThemeData(brightness: Brightness.dark, primaryColor: Colors.amber),
       home: SignsRoute(),
     );
   }

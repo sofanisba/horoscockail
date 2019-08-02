@@ -46,6 +46,26 @@ class BoozeCard extends StatelessWidget {
               Text(snapshot.data.name,
                   style: Theme.of(context).textTheme.display1),
               TabledListItem(name: 'Glass', value: snapshot.data.glass),
+              Column(
+                children: <Widget>[
+                  for (var item in snapshot.data.ingredients)
+                    if (
+                      item['ingredient'] != null &&
+                      item['measure'] != null &&
+                      item['ingredient'].length != 0 && 
+                      item['measure'].length != 0)
+                      TabledListItem(
+                          name: item['ingredient'], value: item['measure']),
+                  Padding(padding: EdgeInsets.all(0.0)),
+                  Text('INSTRUCTIONS',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25.0,
+                          height: 2.0,
+                          color: this.color)),
+                ],
+              ),
               Text(snapshot.data.instructions)
             ]);
           } else if (snapshot.hasError) {

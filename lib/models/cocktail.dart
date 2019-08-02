@@ -46,12 +46,10 @@ class Cocktail {
     var ingredients = [];
 
     for (var i = 1; i <= 15; i++) {
-      if (res['strIngrdient$i'] != '' && res['strMeasure$i'] != '') {
-        ingredients.add({
-          'ingredient': res['strIngredient$i'],
-          'measure': res['strMeasure$i']
-        });
-      }
+      ingredients.add({
+        'ingredient': res['strIngredient$i'],
+        'measure': res['strMeasure$i']
+      });
     }
 
     return Cocktail(
