@@ -67,7 +67,7 @@ class BoozeCard extends StatelessWidget {
                           color: this.color)),
                 ],
               ),
-              Text(snapshot.data.instructions)
+              Text(snapshot.data.instructions, style: TextStyle(fontSize: 20.0))
             ]);
           } else if (snapshot.hasError) {
             return Text(snapshot.error);
