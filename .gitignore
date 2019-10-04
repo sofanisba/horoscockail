@@ -3,9 +3,17 @@
 
 .packages
 .pub/
+.env
 
 build/
 
 .flutter-plugins
 android/key.properties
 android/key.jks
+android/.gradle/*
+android/.settings
+android/.project
+
+android/app/.settings
+android/app/.classpath
+android/app/.project

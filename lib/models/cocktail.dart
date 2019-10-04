@@ -3,15 +3,17 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import './shared_prefs.dart';
 
 Future<Cocktail> fetchCocktail(String sign) async {
   final cocktailKey = Prefs.getCocktailKey(sign);
   final shouldFetch = await Prefs.isDataStale(cocktailKey);
   if (shouldFetch) {
-    const accessKey = '1';
-    const url =
-        'https://www.thecocktaildb.com/api/json/v1/$accessKey/random.php';
+    final accessKey = DotEnv().env['COCKTAIL_API_KEY'];
+    print(accessKey);
+    final url =
+        'https://www.thecocktaildb.com/api/json/v2/$accessKey/random.php';
     final response = await http.get(url);
     if (response.statusCode == 200) {
       await Prefs.setCocktail(sign, response.body);
