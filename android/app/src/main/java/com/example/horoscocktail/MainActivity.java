@@ -1,4 +1,4 @@
-package com.example.horoscocktail;
+package com.horoscocktail;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
